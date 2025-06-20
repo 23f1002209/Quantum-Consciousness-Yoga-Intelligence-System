@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCYIS - Quantum Consciousness Yoga Intelligence System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1 class="title">
+                <span class="quantum-text">QCYIS</span>
+                <span class="subtitle">Quantum Consciousness Yoga Intelligence System</span>
+            </h1>
+            <div class="connection-status" id="connectionStatus">
+                <span class="status-indicator"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="video-section">
+                <div class="video-container">
+                    <video id="videoElement" autoplay playsinline muted></video>
+                    <canvas id="poseCanvas"></canvas>
+                    <div class="pose-overlay" id="poseOverlay">
+                        <div class="pose-info">
+                            <div class="detected-pose" id="detectedPose">No pose detected</div>
+                            <div class="quality-score" id="qualityScore">Quality: --</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-controls">
+                    <button id="startCamera" class="btn btn-primary">Start Camera</button>
+                    <button id="stopCamera" class="btn btn-secondary" disabled>Stop Camera</button>
+                    <button id="togglePoseDetection" class="btn btn-accent" disabled>Start Pose Detection</button>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card consciousness-card">
+                    <h3>Consciousness Metrics</h3>
+                    <div class="metrics-grid">
+                        <div class="metric">
+                            <label>PCI Score</label>
+                            <div class="metric-value" id="pciScore">0.000</div>
+                        </div>
+                        <div class="metric">
+                            <label>Meditation Depth</label>
+                            <div class="metric-value" id="meditationDepth">Light</div>
+                        </div>
+                        <div class="metric">
+                            <label>Coherence</label>
+                            <div class="metric-value" id="coherence">0.000</div>
+                        </div>
+                    </div>
+                    <div class="consciousness-visualization" id="consciousnessViz"></div>
+                </div>
+
+                <div class="card biofield-card">
+                    <h3>Biofield Analysis</h3>
+                    <div class="chakra-grid" id="chakraGrid">
+                        <div class="chakra" data-chakra="crown">
+                            <div class="chakra-indicator"></div>
+                            <span>Crown</span>
+                        </div>
+                        <div class="chakra" data-chakra="third_eye">
+                            <div class="chakra-indicator"></div>
+                            <span>Third Eye</span>
+                        </div>
+                        <div class="chakra" data-chakra="throat">
+                            <div class="chakra-indicator"></div>
+                            <span>Throat</span>
+                        </div>
+                        <div class="chakra" data-chakra="heart">
+                            <div class="chakra-indicator"></div>
+                            <span>Heart</span>
+                        </div>
+                        <div class="chakra" data-chakra="solar_plexus">
+                            <div class="chakra-indicator"></div>
+                            <span>Solar Plexus</span>
+                        </div>
+                        <div class="chakra" data-chakra="sacral">
+                            <div class="chakra-indicator"></div>
+                            <span>Sacral</span>
+                        </div>
+                        <div class="chakra" data-chakra="root">
+                            <div class="chakra-indicator"></div>
+                            <span>Root</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card quantum-card">
+                    <h3>Quantum Processing</h3>
+                    <div class="quantum-metrics">
+                        <div class="quantum-metric">
+                            <label>Qubit Coherence</label>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="qubitCoherence"></div>
+                            </div>
+                        </div>
+                        <div class="quantum-metric">
+                            <label>Entanglement</label>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="entanglement"></div>
+                            </div>
+                        </div>
+                        <div class="quantum-metric">
+                            <label>Processing Power</label>
+                            <div class="metric-value" id="processingPower">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card corrections-card">
+                    <h3>Pose Corrections</h3>
+                    <div class="corrections-list" id="correctionsList">
+                        <p class="no-corrections">Start pose detection to receive guidance</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-section">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h3>AI Yoga Assistant</h3>
+                        <div class="chat-status" id="chatStatus">Ready</div>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message assistant-message">
+                            <div class="message-content">
+                                Welcome to QCYIS! I'm your AI yoga instructor. Ask me about poses, breathing techniques, or meditation guidance.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" placeholder="Ask about yoga poses, breathing, or meditation..." maxlength="500">
+                        <button id="sendMessage" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
